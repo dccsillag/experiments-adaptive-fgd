@@ -1,0 +1,77 @@
+[project]
+name = "adaptive_fgd"
+version = "0.1.0"
+description = ""
+authors = [
+    "Daniel Csillag <daniel.csillag@fgv.br>",
+    "Rodrigo Schuller",
+    "Pedro Dall'Antonia",
+    "Leonidas Guibas",
+    "Luiz Velho",
+    "Tiago Novello",
+]
+requires-python = ">=3.12,<3.13"
+readme = "README.md"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.12",
+]
+dependencies = [
+    "configargparse>=1.7,<2",
+    "dill>=0.3.9,<0.4",
+    "icecream>=2.1.4,<3",
+    "imageio>=2.37.0,<3",
+    "imageio-ffmpeg>=0.6.0,<0.7",
+    "jaxtyping>=0.2.38,<0.3",
+    "matplotlib>=3.10.0,<4",
+    "opencv-python>=4.11.0.86,<5",
+    "scikit-image>=0.25.1,<0.26",
+    "scikit-learn>=1.6.1,<2",
+    "tensorboard>=2.19.0,<3",
+    "tqdm>=4.67.1,<5",
+    "xgboost>=2.1.4,<3",
+    "pycolmap>=3.11.1,<4",
+    "torch>=2.9.0,<3",
+    "aim>=3.29.1,<4",
+    "jax[cuda12]>=0.8.1,<0.9",
+    "jax-dataclasses>=1.6.2,<2",
+    "wandb>=0.21.3,<0.22",
+    "scipy>=1.16.2,<2",
+    "lineax>=0.0.8,<0.0.9",
+    "torchvision>=0.24.0,<0.25",
+    "ipdb>=0.13.13,<0.14",
+    "lpips>=0.1.4,<0.2",
+    "pillow==11",
+    "pyyaml>=6.0.3,<7",
+    "pymcubes>=0.1.6,<0.2",
+    "moviepy>=2.2.1,<3",
+    "cuda-toolkit>=13.0.1,<14",
+    "optuna>=4.6.0,<5",
+    "optuna-dashboard>=0.20.0,<0.21",
+    "napari[pyqt5]>=0.6.6,<0.7",
+    "flax>=0.12.5,<0.13",
+    "humanize>=4.15.0,<5",
+    "ucimlrepo>=0.0.7,<0.0.8",
+    "fastparquet>=2026.3.0,<2027",
+    "pyarrow>=24.0.0,<25",
+]
+
+[dependency-groups]
+dev = ["pre-commit>=4.2.0,<5"]
+
+[tool.uv]
+default-groups = "all"
+
+[[tool.uv.index]]
+name = "torch128"
+url = "https://download.pytorch.org/whl/cu128"
+explicit = true
+
+[tool.uv.build-backend]
+module-name = ["src"]
+module-root = ""
+namespace = true
+
+[build-system]
+requires = ["uv_build>=0.11.21,<0.12.0"]
+build-backend = "uv_build"

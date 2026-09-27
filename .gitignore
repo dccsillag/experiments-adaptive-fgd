@@ -1,0 +1,14 @@
+/data
+/out-*
+/models
+/experiments
+/cuda_12
+/cuda*.run
+.pyc
+__pycache__
+*.so
+/.aim
+*.png
+/results
+
+/.venv
